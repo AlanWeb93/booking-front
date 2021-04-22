@@ -46,7 +46,8 @@ const ViewHotel = ({ match, history }) => {
         
         let res = await getSessionId(auth.token, match.params.hotelId);
         
-        const stripe = await loadStripe(process.env.REACT_API_STRIPE_KEY);
+        const stripe = await loadStripe(process.env.REACT_APP_STRIPE_KEY);
+        
         stripe.redirectToCheckout({
             sessionId: res.data.sessionId,
         })
@@ -73,8 +74,8 @@ const ViewHotel = ({ match, history }) => {
                         <p className="alert alert-info mt-3">{hotel.price}</p>
                         <p className="card-text">
                             <span className="float-right text-primary">
-                                for {diffDays(hotel.from, hotel.to)}{" "}
-                                {diffDays(hotel.from, hotel.to) <= 1 ? " day" : " days"}
+                                por {diffDays(hotel.from, hotel.to)}{" "}
+                                {diffDays(hotel.from, hotel.to) <= 1 ? " dia" : " dias"}
                             </span>
                         </p>
                         <p>

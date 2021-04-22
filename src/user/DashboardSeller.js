@@ -76,9 +76,9 @@ const DashboardSeller = () => {
                 <div className="col-md-6 offset-md-3 text-center">
                     <div className="p-5 pointer">
                         <HomeOutlined className="h1" />
-                        <h4>setup payouts to post hotel rooms</h4>
+                        <h4>configurar pagos para publicar habitaciones de hotel</h4>
                         <p className="lead">
-                            MERN partners with stripe to transfer earnings to your bank account  
+                            Hotel Booking se asocia con stripe para transferir ganancias a su cuenta bancaria  
                         </p>
                         <button 
                             disabled={loading}

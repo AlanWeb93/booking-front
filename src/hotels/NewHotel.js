@@ -73,7 +73,7 @@ const NewHotel = () => {
             </div>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-10">
+                    <div className="col-md-9">
                         <br />
                         <HotelCreateForm
                             values={values}
@@ -84,16 +84,15 @@ const NewHotel = () => {
                             location={location}
                             setLocation={setLocation} />
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-md-3">
                         <img
                             src={preview}
                             alt="preview_image"
                             className="img img-fluid m-2" />
-                        <pre>{JSON.stringify(values, null, 4)}</pre>
-                        {JSON.stringify(location)}
                     </div>
                 </div>
             </div>
+            <br />
         </>
     )
 }

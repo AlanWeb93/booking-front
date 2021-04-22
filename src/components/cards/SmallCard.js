@@ -45,11 +45,11 @@ const SmallCard = ({
                             <p className="card-text">{`${h.content.substring(0, 200)}...`}</p>
                             <p className="card-text">
                                 <span className="float-right text-primary">
-                                    for {diffDays(h.from, h.to)}{" "}
-                                    {diffDays(h.from, h.to) <= 1 ? " day" : " days"}
+                                    por {diffDays(h.from, h.to)}{" "}
+                                    {diffDays(h.from, h.to) <= 1 ? " dia" : " dias"}
                                 </span>
                             </p>
-                            <p className="card-text">{h.bed} bed</p>
+                            <p className="card-text">{h.bed} camas</p>
                             <p className="card-text">Disponible desde {new Date(h.from).toLocaleDateString()}</p>
                             
 

@@ -36,8 +36,8 @@ const Login = ({history}) => {
 
     return (
         <>
-            <div className="container-fluid bg-secondary p-5 text-center">
-                Login
+            <div className="container-fluid bg-secondary p-4 text-center">
+                <h1>Iniciar Sesion</h1>
             </div>
 
             <div className="container">

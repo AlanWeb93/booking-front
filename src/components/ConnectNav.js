@@ -6,6 +6,9 @@ import { currencyFormatter, getAccountBalance, payoutSetting } from '../actions/
 import { SettingOutlined } from '@ant-design/icons'
 import { toast } from 'react-toastify'
 
+import 'moment/locale/es';
+moment.locale('es');
+
 const { Meta } = Card;
 const { Ribbon } = Badge;
 
@@ -17,7 +20,6 @@ const ConnectNav = () => {
 
     useEffect(() => {
         getAccountBalance(auth.token).then(res => {
-            console.log(res);
             setBalance(res.data);
         })
     }, [])
@@ -51,7 +53,7 @@ const ConnectNav = () => {
                 auth.user.stripe_seller &&
                 auth.user.stripe_seller.charges_enabled && (
                     <>
-                        <Ribbon text="Avaliable" color="grey">
+                        <Ribbon text="Disponible" color="grey">
                             <Card className="bg-light pt-1">
                                 {balance && balance.pending && balance.pending.map((bp, i) => (
                                     <span key={i} className="lead">
@@ -60,7 +62,7 @@ const ConnectNav = () => {
                                 ))}
                             </Card>
                         </Ribbon>
-                        <Ribbon text="Payouts" color="silver">
+                        <Ribbon text="Pagos" color="silver">
                             <Card 
                                 onClick={handlePayoutSettings}
                                 className="bg-light pointer">

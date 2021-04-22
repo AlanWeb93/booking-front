@@ -26,7 +26,7 @@ const Search = () => {
     }
 
     return (
-        <div className="d-flex pb-4">
+        <div className="container-fluid d-flex pb-4">
             <div className="w-100">
                 <AlgoliaPlaces
                     placeholder="Locacion"
